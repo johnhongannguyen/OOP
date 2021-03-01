@@ -21,13 +21,27 @@
 function Circle(radius){
     // Instance members
     this.radius = radius;
-
+    this.move = function() {
+        console.log('move');
+    }
 }
+
+const c1 = new Circle(1);
 // Prototype members 
 Circle.prototype.draw = function() {
 
     console.log('drawing');
 }
 
-const c1 = new Circle(1);
+c1.draw();
+
+// return only instance members , not prototype members 
+console.log(Object.keys(c1));
 const c2 = new Circle(1);
+
+
+for(let key in c1)
+// return all the instances and prototypes
+// c1.hasOwnProperty('radius'); -  return 'true'
+//c1.hasOwnProperty('draw'); -  return 'false' because of prototype property
+console.log(key);
