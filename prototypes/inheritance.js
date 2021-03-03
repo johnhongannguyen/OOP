@@ -45,3 +45,8 @@ for(let key in c1)
 // c1.hasOwnProperty('radius'); -  return 'true'
 //c1.hasOwnProperty('draw'); -  return 'false' because of prototype property
 console.log(key);
+
+// Avoid extending the built in Object
+// don't modify objects you don't own 
+// because somewhere else you might be using 
+// there might be a code that dependent 
